@@ -1,0 +1,1148 @@
+ CSS reset
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h3,h4,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0 ;
+    padding:0;
+}
+
+  
+/* Body Reset and SE Color Theme */
+html,body {
+    margin:0 auto;
+    padding:0;
+    font-size:62.5%;
+    font-family:'QuickSand' ,'Courier New', Courier, monospace;
+    max-width:1920px;
+    min-width:400px;
+    --cerulean: hsla(196, 36%, 41%, 1);
+    --dark-slate-gray:hsla(178, 41%, 25%, 1);
+    --light-slate-gray:hsla(178, 41%, 25%, 20);
+    --eggshell: hsla(53, 44%, 88%, 1);
+    --dark-goldenrod: hsla(40, 43%, 46%, 1);
+    --saffron: hsla(43, 92%, 63%, 1);
+
+ 
+}
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+
+
+/*Font Size */
+h3 {
+    font-size:2.8rem;
+    color:var(--cerulean);
+}
+
+h4 {
+    font-size:2.4rem;
+    color:var(--cerulean);
+}
+
+h5 {
+    font-size:2.2rem;
+}
+
+h6 {
+    font-size:1.6rem;
+}
+
+p {
+    font-size:1.8rem;
+}
+
+/* Global Button Settings */
+.btn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem ;
+       text-decoration: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    min-width:16rem;
+    max-width:18rem;
+    min-height:4rem;
+    text-align: center;
+    border-radius:.4rem;
+    box-sizing: border-box;
+    background-color: var(--dark-slate-gray);
+    transition: all ease-in .1s;
+  }
+
+a {
+    color:white;
+}
+  .btn:hover {
+    background-color: var(--cerulean);
+    transform: scale(108%);
+}
+/* Main Navigation Styles */
+.navbar {
+    background-color:var(--dark-slate-gray);
+    padding: 1rem 6.4rem;
+    position:sticky;
+    top:0;
+    z-index:12;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .navbar-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    
+  }
+
+  .navbar-logo img {
+    display:flex;
+    width:5rem;
+    border-radius: 50%;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap:1.6rem;
+  }
+  
+  /* .navbar-menu li {
+    margin-right: 10px;
+  } */
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.6rem;
+    transition: border-bottom ease-in-out .1s ;
+    padding:.5rem;
+  }
+
+  .navbar-menu li a:hover {
+    border-bottom: .3rem solid white;
+    border-radius: .3rem;
+
+  }
+
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    height: 4rem;
+    background-color: #f1f1f1;
+    border-radius: .8rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    order:3;
+
+  }
+
+  @media screen and (min-width:550px) and (max-width:800px) {
+    .search-bar {
+        display:none;
+    }
+
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: .4rem 1rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.6rem;
+    color:var(--dark-slate-gray);
+
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background-color:var(--cerulean);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-bar button i {
+    font-size: 16px;
+  }
+
+
+
+/* Layout CSS - Grid Creation*/
+
+.main-container {
+    /* margin-top:2.8rem;
+    margin-bottom:2.8rem; */
+    display:grid;
+    grid-template-columns: 15% repeat(6,1fr) 15%;
+    row-gap: 6rem;  
+
+    
+}
+
+.main-item {
+    grid-column:2/ span 6;
+}
+
+.banner {
+    grid-column:1/-1;
+    grid-row:1/2;
+    height:50vh;
+    grid-auto-rows: max-content;
+ 
+}
+
+
+.banner figure {
+    height:100%;
+    width:100%;
+    margin:0;
+}
+
+.banner img {
+    background-image:url('https://images.unsplash.com/photo-1615118265620-d8decf628275?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    background-position:15%;
+    border:none;
+
+}
+
+/* Styling the Upskill Your Technical Workforce Without the Need to Travel section */
+
+.upskill {
+    grid-row:2/3;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+     
+}
+
+.digital-experience {
+    display:grid;
+    grid-template-columns: 450px  1fr;
+    grid-auto-rows:min-content;
+    grid-gap:1.2rem;
+}
+
+
+
+.digital-experience figure {
+    grid-column: 1/2;
+    grid-row:1/2;
+    display:grid;
+    max-width:100%;
+    height:100%;
+    aspect-ratio:1/1;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border:.8rem solid var(--cerulean);
+    border-left:none;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin:0;
+    z-index:-1;
+}
+
+
+.digital-experience figure figcaption {
+    grid-column: 1/2;
+    grid-row:1/2;
+    align-self:end;
+    justify-self:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:1.2rem;
+    padding:0 6%;
+    z-index:4;
+    margin-bottom:10%;
+    margin-right:15%;
+}
+
+
+.digital-experience figure figcaption h4 {
+    color:white;
+    text-align: center;
+    margin:0;
+    max-width:30ch;
+}
+
+.digital-experience figure figcaption h5 {
+    color:white;
+    text-align: center;
+    margin:0;
+    max-width:25ch;
+
+}
+
+.digital-experience figure img {
+    grid-column: 1/2;
+    grid-row:1/2;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+
+.image-overlay {
+    grid-column: 1/2;
+    grid-row:1/2;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.8));
+    z-index:3;
+    
+}
+
+
+.graphic-container {
+    grid-column:2/-1;
+    grid-row:1/2;
+    align-self:stretch;
+    justify-self: stretch;
+    display:flex;
+    flex-direction: column;
+    align-items:stretch;
+    /* focus here */
+    justify-content:center;
+    gap:1.2rem;
+    margin-left:-5rem;
+    /* gap:4.2rem; */
+    /* z-index:2; */
+    padding: 2rem 0rem;
+}
+
+.graphic-item {
+    display:flex;
+    gap:1.2rem;
+    align-items:center;
+}
+
+.item-1 {
+    margin-left:-5rem;
+}
+
+.item-3 {
+    margin-left:-5rem;
+
+
+}
+.graphic-item-circle {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    width:8rem;
+    height:8rem;
+    padding:1rem;
+    /* clip-path: circle(); */
+    border:.4rem solid var(--cerulean);
+    border-radius: 50%;
+    z-index:10;
+    flex-basis:4rem;
+        
+}
+
+.graphic-item-circle img {
+    width:8rem;
+}
+.graphic-item p {
+    display:flex;
+    width:100%;    
+    justify-content:left;
+    align-items:center;
+    padding:0rem 1.2rem 0rem 8rem;
+    border:.35rem solid var(--cerulean);
+    border-radius: 2rem;
+    margin-left:-9rem;
+    height:80%;
+    text-align:left;
+    background-color:white;
+}
+
+
+/* Accomplish Section - Cards Section */
+
+.accomplish {
+    grid-row:3/4;
+    grid-column:2/8;
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+}
+
+.card-container {
+   display:grid;
+   max-width: 100%;
+   grid-template-columns: repeat(auto-fill, minmax(46rem,1fr));
+   gap:1.2rem;
+   /* overflow:hidden; */
+   /* grid-auto-rows:1fr; */
+}
+.card-item-container {
+    perspective:1000px;
+
+}
+.card-item {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+    max-width:100%;
+    max-height:100%;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 16/9; 
+    /* Card Flipping */
+    transition: transform .6s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
+
+/* card flipping */
+.card-item-container:hover .card-item {
+    transform: rotateY(180deg);
+}
+
+
+.card-item__overlay, .card-item__figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card-item__figure{
+    grid-column:1/2;
+    grid-row:1/2;
+    max-width:100%;
+    height:100%;
+    margin:0;
+    display:grid;
+    grid-template-columns: 1fr;
+    border-radius:.4rem;
+    overflow:hidden;
+}
+
+.card-item__figure img {
+    grid-row:1/2;
+    grid-column:1/2;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    z-index:1;
+    height: inherit;
+}
+
+.card-item__gradient {
+    grid-row:1/2;
+    grid-column:1/2;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
+    z-index:3;
+    height: inherit;
+}
+
+.card-item__green {
+    grid-row:1/2;
+    grid-column:1/2;
+    align-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s ease;
+    padding:0rem;
+    z-index:3;
+    transform: translateY(-30%);
+}
+
+.card-item__green h4 {
+    padding:.8rem .8rem;
+    flex:1;
+    text-align: center;
+    color:white;
+    /* font-size:medium; */
+    z-index:4; 
+    height:inherit; 
+    display:none;    
+}
+
+.card-item__overlay {
+    /* box-sizing: border-box; */
+    grid-column:1/2;
+    grid-row:1/2;
+    max-width:100%;
+    max-height:inherit;
+    display:flex;
+    align-items:stretch;
+    justify-content: center;
+    color:var(--dark-slate-gray);
+    text-align: center;
+    transition: transform .5s ease;
+    z-index:5;
+    visibility:hidden;
+    transition: transform .6s ease-in-out;
+    /* display:none; */
+}
+
+
+.card-item__overlay h5 {
+    box-sizing: border-box;
+    max-width:100%;
+    max-height:inherit;
+    background-color:var(--cerulean);
+    color:white;
+    opacity: .9;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex:1 0 40rem;
+    flex-direction: column;
+    padding:0rem 5%;
+    margin:0;
+    transform: translateY(-4%);
+    border-radius:.4rem;
+    /* display:none; */
+}
+
+ .card-item-container:hover  {
+
+    /* &  .card-item__green {
+    margin-top:6rem;        
+    align-self:start;
+    }  */
+   
+    & .card-item__overlay h5{
+        /* transform: translateY(-12rem); */
+        /* align-self:end; */
+        visibility:visible;
+        transform: rotateY(180deg);
+
+} 
+    & .card-item__green h4 {
+        visibility: hidden;
+        /* transform: rotateY(180deg); */
+
+    }
+
+ }
+
+ .overlay-link{
+    margin-top:.8rem;  
+}
+
+
+
+
+/* What New Section 
+Get your experienced staff up to speed on using new/updated technology efficiently.
+*/
+.new {
+    width:100%;
+    grid-row:4/5;
+    grid-column:1/-1;
+    background-color:var(--cerulean);
+    color:var(--se-ultra-light-grey-1);
+    padding:1.6rem 0rem;
+    display:grid;
+    grid-template-columns: 15%  minmax(min-content,.5fr) 1fr  minmax(min-content,.5fr) 15%;
+    gap:1rem;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.new-title {
+   grid-column: 2/3;
+   justify-content: center;
+   align-items: start;
+   display:flex;
+   gap:1.2rem;
+   flex-direction: column;
+}
+
+.new h3 {
+   color:white;
+   text-align: center;
+}
+
+.new h4 {
+    color:white;
+    font-weight:normal;
+}
+.new h5 {
+    grid-column:3/4;
+    /* text-align: center; */
+    color:white;
+    font-weight:normal;
+    /* font-size:2.4rem; */
+
+}
+.new-btns {
+    grid-column: 4/5;
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+   
+}
+.new-btn {
+    align-self:end;
+    display:flex;
+    flex-direction: row;
+    padding:1.2rem 4rem;
+    background-color: var(--cerulean);
+    min-width:18rem;
+    border:.2rem solid white;
+    color:white;
+    transition: all ease-in-out .1s;
+    & p {
+        flex:1 0 25rem;
+    } 
+}
+
+.new-btn:hover {
+/* background-color: var(--dark-goldenrod); */
+transform: scale(108%);
+
+}
+
+
+
+/* Virtual Training by Automation Function
+ */
+.filter-1 {
+    grid-row:5/6;
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+}
+
+.filter-1-btns {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(36rem,1fr));
+    gap:1rem;
+    padding:.8rem;
+
+}
+
+
+
+.filter-1-btns a {
+    background-color: var(--cerulean);
+    max-width:none;
+    max-height:none;
+    height:5.2rem;
+    display:flex;
+    gap:1.2rem;
+    justify-content: start;
+    padding-left:25%;
+    flex:1;
+}
+
+.filter-1-btn:hover {
+    transform: scale(103%);
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.filter-1-btns a img{
+    flex:0 1 1rem;
+    order:-1;
+    width: 3.2rem;
+}
+
+
+/* Virtual Training by Industrial Automation Technology
+*/
+.filter-2 {
+    grid-row:6/7;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+}
+
+.filter-2-btns {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(36rem,1fr));
+    gap:1rem;
+    padding:.8rem;
+    background-color:var(--se-ultra-light-grey-1);
+    border-radius: .3rem;
+}
+.filter-2-btn  {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:none;
+    background-color:var(--cerulean);
+    color:white;
+    max-height: none;
+    height:5.2rem;
+    text-align: start;
+    transition: all ease-in-out .1s;
+    & svg {
+        width:3.2rem;
+        fill:white;
+
+    }
+}
+
+
+.filter-2-btn:hover  {
+    transform: scale(103%);
+    /* border:.2rem solid white; */
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    z-index:10;
+    & svg {
+    fill:white;
+    transform:scale(105%);
+
+    }
+
+   }
+  
+
+
+/* Customize Section */
+.customize {
+    justify-self: stretch;
+    align-self: stretch;
+    grid-row:7/8;
+    grid-column:1/ span 8;
+    display:flex;
+    flex-direction:column;
+    padding:1.6rem 0rem;
+    background-color:var(--cerulean);
+    color:var(--se-ultra-light-grey-1);
+    align-items:center;
+    justify-content: stretch;
+    gap:1.2rem;
+
+} 
+
+.customize h4 {
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    padding:1rem 5%;
+}
+
+.customize-btn {
+    max-width:none;
+    background-color:var(--cerulean);
+    border:.2rem solid white;
+    color:white;
+    width:28rem;
+}
+
+.customize-btn:hover {
+    background-color: var(--se-ultra-light-grey-1);
+    
+}
+
+
+
+
+/* Media Queries */
+
+
+
+
+/* First Media Query - Content Between 1001px to 1360px */
+
+@media screen and (min-width: 1000px) and (max-width: 1360px)  {
+
+    .main-container {
+        display:grid;
+        grid-template-columns: 15% repeat(6,1fr) 15%;
+        row-gap: 4rem;    
+    }
+
+   
+/* Digital Learning Experience */
+    .digital-experience {
+        display:grid;
+        grid-template-columns: minmax(25%,.75fr) 1fr;
+        grid-auto-rows:min-content;
+    }
+
+    .digital-experience figure {
+        grid-row:1/2;
+        grid-column: 1/2;
+        /* border-radius:.4rem; */
+        /* max-width: 100%; */
+        /* max-height:100%; */
+        
+
+    }
+
+    
+    .graphic-container {
+        margin-left:-6rem;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        }
+
+    .item-1  {
+        margin-left:-4rem;
+    }
+
+    .item-3 {
+        margin-left:-4rem;
+    }
+
+    .graphic-item p {
+        justify-content:stretch;
+        /* align-items:center; */
+        width:100%;
+
+        }
+
+    .card-container {
+        display:grid;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(36rem,1fr));
+        grid-gap:1.2rem;
+        /* grid-auto-rows:.75fr; */
+        }
+
+    
+    .card-item figcaption h4 {
+        font-size:medium;  
+    }
+
+    .card-item__overlay h5 {
+        font-size:medium;  
+    }
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 1000px) {
+  
+   
+    .main-container {
+        display:grid;
+        grid-template-columns: 10% repeat(6,1fr) 10%;
+        row-gap: 4rem;    
+    }
+
+    .card-container {
+        display:grid;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+        grid-gap:1.2rem;
+        /* grid-auto-rows:.75fr; */
+     }
+
+       /* Accomplish Section */
+     
+    
+    /* Adjusting the what's new section to display vertically rather than horizonally */
+    .new {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        /* justify-content: space-between; */
+        gap:1.2rem; 
+        width:100%;
+        padding:2.4rem 0;
+    
+        }
+    
+    .new-title {
+        text-align: center;
+        flex:1 0 1rem;
+        margin:0;
+        align-items: center;
+    }
+
+    .new h5 {
+        text-align:center;
+        max-width:50rem;
+        margin:0;
+    }
+    .new-btns {
+        flex-direction:row;
+        flex:0 0;
+    }
+    
+/* Digital Learning Experience */
+    .digital-experience {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows:min-content;
+    }
+
+    .digital-experience figure {
+        grid-row:1/2;
+        grid-column: 1/2;
+        max-width: 100%;
+        border-radius:1.2rem;
+        border:none;
+    }
+
+    .digital-experience figure figcaption {
+
+        align-content:center;
+        align-items:center;
+        margin:0;
+        padding:0 6%;
+        margin-bottom:5%;
+    }
+
+    .digital-experience figure figcaption h4 , .digital-experience figure figcaption h5  {
+        max-width:none;
+
+    }
+
+
+    .graphic-container {
+        margin-left:0rem;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        }
+
+    .item-1  {
+        margin-left:0;
+    }
+
+    .item-3 {
+        margin-left:0;
+    }
+
+    .graphic-item p {
+        justify-content:stretch;
+        /* align-items:center; */
+        width:100%;
+
+    }
+    /* Accomplish Section */
+    .card-container {
+        display:grid;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(40rem,1fr));
+
+    }  
+        
+    /* .card-item figcaption h4 {
+        font-size:medium;  
+    }
+
+    .card-item__overlay h5 {
+        font-size:medium;  
+    } */
+
+    .filter-1-btns {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(36rem,1fr));
+        gap:1.2rem;
+        padding:.8rem;
+    
+    }
+
+    .filter-1-btns ,.filter-2-btns {
+        padding:0;
+        background-color:white;
+    }
+    }
+
+/* Decreasing front size  */
+@media screen and (min-width:450px) and (max-width:560px){
+
+   
+    .navbar-container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+        justify-content: space-between;
+      }
+
+    .navbar-container ul {
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+    }
+      
+    .main-container {
+        display:grid;
+        grid-template-columns: 10% repeat(6,1fr) 10%;
+        row-gap: 4rem;    
+    }
+
+
+    .card-container {
+        display:grid;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(26rem,1fr));
+        grid-gap:1.2rem;
+        /* grid-auto-rows:.75fr; */
+     }
+
+
+
+    /* Decrease Font Size */
+    h1, h2, h3, h4, h5, h6, p {
+        font-size:medium;
+    }
+
+    .filter-1-btns ,.filter-2-btns {
+        padding:0;
+        background-color:white;
+    }
+
+    }  
+
+
+ /* For Mobile Devices */
+ @media screen and (max-width: 450px) {
+
+    
+    .main-container {
+        display:grid;
+        grid-template-columns: 5% repeat(6,1fr) 5%;
+        row-gap: 4rem;    
+    }
+
+
+    .card-container {
+        display:grid;
+        /* max-width: 100%; */
+        grid-template-columns:1fr;
+        grid-gap:1.2rem;
+        /* grid-auto-rows:.75fr; */
+     }
+
+    /* Digital Learning Experience */
+    .digital-experience {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr;
+    }
+
+    
+    .digital-experience figure {
+        grid-row:1/2;
+        grid-column: 1/2;
+        max-width: 100%;
+        border-radius:1.2rem;
+        border:none;    
+    }
+
+    .digital-experience figure figcaption {
+
+        align-content:center;
+        align-items:center;
+        margin:0;
+        padding:0 6%;
+        margin-bottom:5%;
+        padding:0 6%;
+        
+    }
+
+    .digital-experience figure figcaption h4 , .digital-experience figure figcaption h5  {
+        max-width:none;
+
+    }
+    .graphic-container {
+        margin-left:0rem;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        
+        }
+
+    .item-1  {
+        margin-left:0;
+    }
+
+    .item-3 {
+        margin-left:0;
+    }
+
+      
+/* Accomplish Section */
+    .card-container {
+        display:grid;
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(40rem,1fr));
+    
+    }
+        
+    /* Adjusting the what's new section to display vertically rather than horizonally */
+    .new {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: space-between;
+        gap:1.2rem; 
+        width:100%;
+        padding:1.6rem 0;
+
+    }
+    
+    .new-title {
+        text-align: center;
+        flex:1 0 1rem;
+        margin:0;
+    }
+
+    .new h5 {
+        text-align:center;
+        max-width:50rem;
+        margin:0;
+    }
+        .new-btns {
+        flex-direction:row;
+        flex:0 0;
+    }
+
+
+    /* Decrease Font Size */
+    h1, h2, h3, h4, h5, h6, p {
+        /* color: blue; */
+        /* text-align: center; */
+        font-size:medium;
+    }
+
+    .card-item figcaption h4 {
+        font-size:small;  
+    }
+
+    .card-item__overlay h5 {
+        font-size:small;  
+    }
+
+    
+
+    .card-item:hover  {
+       
+        & .card-item__overlay{
+            visibility:visible;
+            margin-bottom:16%;
+            /* margin:0; */
+    } 
+     }
+
+     .filter-1-btns ,.filter-2-btns {
+        padding:0;
+        background-color:white;
+    }
+    }
