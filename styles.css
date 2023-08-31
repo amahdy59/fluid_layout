@@ -12,8 +12,8 @@ html,body {
     font-size:62.5%;
     font-family:'QuickSand' ,'Courier New', Courier, monospace;
     max-width:2400px;
-    min-width:400px;
-    width:100%;
+/*     min-width:400px;
+    width:100%; */
     box-sizing: border-box;
     --cerulean: hsla(196, 36%, 41%, 1);
     --dark-slate-gray:hsla(178, 41%, 25%, 1);
