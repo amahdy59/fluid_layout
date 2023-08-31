@@ -205,6 +205,7 @@ a {
     grid-row:1/2;
     height:50vh;
     grid-auto-rows: max-content;
+    width: 100%;
  
 }
 
@@ -249,7 +250,7 @@ a {
     grid-column: 1/2;
     grid-row:1/2;
     display:grid;
-    max-width:100%;
+    max-width:97%;
     height:100%;
     aspect-ratio:1/1;
     border-top-right-radius: 50%;
@@ -1285,7 +1286,7 @@ transform: scale(108%);
 
     .filter-1-btns, .filter-2-btns, .card-container {
         display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(100%,1fr));
+        grid-template-columns:repeat(auto-fit,minmax(90%,97%));
         gap:1.2rem;
         /* padding:.8rem; */
         margin: 0;
@@ -1293,7 +1294,17 @@ transform: scale(108%);
     
     }
 
- 
+
+    h1,h2,h3,h4,h5,h6 {
+        display:flex;
+        width:80%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: .5rem 2rem;
+        text-align: center;
+        
+    }
 
    
 
