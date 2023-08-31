@@ -12,8 +12,8 @@ html,body {
     font-size:62.5%;
     font-family:'QuickSand' ,'Courier New', Courier, monospace;
     max-width:2400px;
-/*     min-width:400px;
-    width:100%; */
+    /* min-width:400px; */
+    width:100%;
     box-sizing: border-box;
     --cerulean: hsla(196, 36%, 41%, 1);
     --dark-slate-gray:hsla(178, 41%, 25%, 1);
@@ -1066,6 +1066,14 @@ transform: scale(108%);
 
     }
 
+    .navbar-menu {
+        flex-direction: column;
+        /* width: 100%; */
+        align-items: center;
+        gap:2rem;
+        display:none;
+    }
+
     .navbar {
         width: 100%;
         margin: 0;
@@ -1081,6 +1089,12 @@ transform: scale(108%);
         flex-direction: column;
         
      }
+
+     .search-bar {
+        width:60%;
+     }
+
+    
 
      .card-container figure {
         aspect-ratio: 1/1;
@@ -1216,7 +1230,7 @@ transform: scale(108%);
         margin:0;
     }
         .new-btns {
-        flex-direction:row;
+        flex-direction:column;
         flex:0 0;
     }
 
@@ -1279,9 +1293,7 @@ transform: scale(108%);
     
     }
 
-    /* .section {
-        padding: 1rem 2%;
-    } */
+ 
 
    
 
