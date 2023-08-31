@@ -1015,6 +1015,10 @@ transform: scale(108%);
  /* For Mobile Devices */
  @media screen and (max-width: 450px) {
 
+   body {
+        width:100vw;
+   }
+
     .main-item {
         grid-column:1/-1;
         /* padding: 0 1.2rem; */
