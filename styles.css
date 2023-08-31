@@ -11,8 +11,9 @@ html,body {
     padding:0;
     font-size:62.5%;
     font-family:'QuickSand' ,'Courier New', Courier, monospace;
-    max-width:1920px;
+    max-width:2400px;
     min-width:400px;
+    width:100%;
     --cerulean: hsla(196, 36%, 41%, 1);
     --dark-slate-gray:hsla(178, 41%, 25%, 1);
     --light-slate-gray:hsla(178, 41%, 25%, 20);
@@ -60,7 +61,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: 1rem 1rem ;
-       text-decoration: none;
+    text-decoration: none;
     font-size: 1.8rem;
     cursor: pointer;
     min-width:16rem;
@@ -218,9 +219,10 @@ a {
     width:100%;
     height: 100%;
     object-fit:cover;
-    background-position:15%;
+    background-repeat: no-repeat;
+    background-color:var(--cerulean);
+    background-position:center;
     border:none;
-
 }
 
 /* Styling the Upskill Your Technical Workforce Without the Need to Travel section */
@@ -356,12 +358,13 @@ a {
     border:.4rem solid var(--cerulean);
     border-radius: 50%;
     z-index:10;
-    flex-basis:4rem;
+    flex-basis:2rem;
         
 }
 
-.graphic-item-circle img {
+.graphic-item-circle object {
     width:8rem;
+    /* height:6rem; */
 }
 .graphic-item p {
     display:flex;
@@ -1015,9 +1018,9 @@ transform: scale(108%);
  /* For Mobile Devices */
  @media screen and (max-width: 450px) {
 
-   body {
+    body {
         width:100vw;
-   }
+    }
 
     .main-item {
         grid-column:1/-1;
@@ -1029,9 +1032,10 @@ transform: scale(108%);
         padding:0;
     }
     .main-container {
-        display:grid;
-        grid-template-columns: 5% repeat(6,1fr) 5%;
-        row-gap: 4rem;    
+        display:flex;
+        flex-direction: column;
+        /* /* grid-template-columns: 5% repeat(6,1fr) 5%; */
+        row-gap: 4rem;  
     }
 
     .navbar-container {
@@ -1041,15 +1045,24 @@ transform: scale(108%);
 
 
     .card-container {
-        display:grid;
+        display:flex;
         width:100%;
-        grid-template-columns:1fr;
-        grid-gap:1.2rem;
+        /* grid-template-columns:1fr; */
+        gap:1.2rem;
+        flex-direction: column;
      }
 
      .card-container figure {
         aspect-ratio: 1/1;
+        width:100%;
      }
+
+     .card-conainter figure img {
+        width:100%;
+        object-fit:cover;
+     }
+
+    
 
     /* Digital Learning Experience */
     .digital-experience {
@@ -1141,6 +1154,10 @@ transform: scale(108%);
         overflow: hidden;
         aspect-ratio: 1/1;
     }
+
+    .card-container figure img {
+        object-fit:cover;
+    }
         
     /* Adjusting the what's new section to display vertically rather than horizonally */
     .new {
@@ -1200,5 +1217,8 @@ transform: scale(108%);
      .filter-1-btns ,.filter-2-btns {
         padding:0;
         background-color:white;
+        display:flex;
+        flex-direction: column;
+        max-width: 100%;
     }
     }
